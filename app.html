@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="css/estilos.css">
+
+        <!-- Logicas JS -->
+        <script src="js/logica.js"></script>
+
+    </head>
+    <body onresize="ajustarTamanhoPalcoJogo()">
+
+        <div class="painel">
+            <div class="vida">
+                <img id="v1" src="imagens/coracao_cheio.png" >
+                <img id="v2" src="imagens/coracao_cheio.png" >
+                <img id="v3" src="imagens/coracao_cheio.png" >
+
+            </div>
+            <div class="cronometro">
+                Tempo restante: <span id="tempo"></span>
+            </div>
+        </div>
+    
+        <script>
+            document.getElementById("tempo").innerHTML = tempo
+            var criarMosca = setInterval(function(){
+                posicaoRandomica()
+            }, criarMoscaTempo)
+        </script>
+    </body>
+</html>
